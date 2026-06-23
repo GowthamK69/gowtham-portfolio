@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import VisitorCounter from "./VisitorCounter";
 
 export default function Hero() {
   const skills = [
@@ -29,9 +30,8 @@ export default function Hero() {
       <div className="absolute bottom-20 right-20 h-96 w-96 rounded-full bg-purple-500/20 blur-[140px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-
         <div className="grid min-h-[85vh] items-center gap-16 lg:grid-cols-2">
-
+          
           {/* Profile Image */}
           <motion.div
             initial={{
@@ -48,7 +48,7 @@ export default function Hero() {
             className="flex justify-center"
           >
             <div className="relative">
-
+              
               {/* Glow */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 opacity-30 blur-3xl" />
 
@@ -63,15 +63,14 @@ export default function Hero() {
                 className="relative"
               >
                 <Image
-  src="/profile.png"
-  alt="Gowtham K"
-  width={500}
-  height={500}
-  priority
-  className="rounded-3xl border border-cyan-500/20 object-cover shadow-[0_0_40px_rgba(34,211,238,0.15)]"
-/>
+                  src="/profile.png"
+                  alt="Gowtham K"
+                  width={500}
+                  height={500}
+                  priority
+                  className="rounded-3xl border border-cyan-500/20 object-cover shadow-[0_0_40px_rgba(34,211,238,0.15)]"
+                />
               </motion.div>
-
             </div>
           </motion.div>
 
@@ -97,24 +96,25 @@ export default function Hero() {
             </motion.div>
 
             {/* Name */}
-<motion.h1
-  initial={{
-    opacity: 0,
-    y: 80,
-  }}
-  animate={{
-    opacity: 1,
-    y: 0,
-  }}
-  transition={{
-    duration: 1,
-  }}
-  className="text-5xl font-black leading-none md:text-7xl lg:text-[6rem]"
->
-  <span className="whitespace-nowrap bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-    GOWTHAM K
-  </span>
-</motion.h1>
+            <motion.h1
+              initial={{
+                opacity: 0,
+                y: 80,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className="text-5xl font-black leading-none md:text-7xl lg:text-[6rem]"
+            >
+              <span className="whitespace-nowrap bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                GOWTHAM K
+              </span>
+            </motion.h1>
+
             {/* Role */}
             <motion.h2
               initial={{
@@ -177,6 +177,22 @@ export default function Hero() {
               ))}
             </motion.div>
 
+            {/* Visitor Counter */}
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                delay: 1.25,
+              }}
+              className="mt-8 flex justify-center lg:justify-start"
+            >
+              <VisitorCounter />
+            </motion.div>
+
             {/* Buttons */}
             <motion.div
               initial={{
@@ -207,9 +223,7 @@ export default function Hero() {
             </motion.div>
 
           </div>
-
         </div>
-
       </div>
     </section>
   );
