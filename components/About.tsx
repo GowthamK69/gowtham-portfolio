@@ -145,12 +145,12 @@ export default function About() {
               </div>
 
               <div className="rounded-2xl border border-purple-500/20 bg-purple-500/10 p-5 text-center">
-                <h3 className="text-3xl font-black text-purple-400">1+</h3>
+                <h3 className="text-3xl font-black text-purple-400">2+</h3>
                 <p className="text-sm text-gray-300 mt-1">IEEE Reviewer</p>
               </div>
 
               <div className="rounded-2xl border border-blue-500/20 bg-blue-500/10 p-5 text-center">
-                <h3 className="text-3xl font-black text-blue-400">5+</h3>
+                <h3 className="text-3xl font-black text-blue-400">2+</h3>
                 <p className="text-sm text-gray-300 mt-1">Projects</p>
               </div>
             </div>
